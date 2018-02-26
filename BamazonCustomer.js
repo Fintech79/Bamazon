@@ -17,6 +17,7 @@ var callback = function(err){
 
 	displayItems();
 };
+// syyhdfhdf
 connection.connect(callback)
 //displayItems();
 
