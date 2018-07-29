@@ -42,13 +42,13 @@ function runSearch() {
 			]
 		});
 		// output for sale items
-		/*promise.then(function(result) {
-			/*switch (result.action) {
+		promise.then(function(result) {
+			switch (result.action) {
 				case "Find product by id":
 				productSearch();
 				break;
 
-				case "How much quantitiy of the product woulld you like to purchase?":
+				case "How much quantitiy of the product would you like to purchase?":
 				AddProduct();
 				break;
 
@@ -62,7 +62,7 @@ function runSearch() {
 		})
 		.finally(function(){
 			console.error('user didnt make a choice')
-		})*/
+		})
 }
 //function require inquierer
 
@@ -73,15 +73,15 @@ function productSearch() {
 		type: "input",
 		message: "What is your selection?"
 	})
-	/*.then(function(answer) {
-		var query = "SELECT * FROM products WHERE name= ? ",{name:product},function(err,response) {
+	.then(function(answer) {
+		var query = "SELECT * FROM products WHERE name=  ",function(err,res) {
 			for (var i = 0; i < res.length; i++) {
 				console.log("Position: " + res[i].product + " || productID: " + res[i]. + 
 					" || quantitiy: " + res[i].product);
 			}
 			runSearch();
 		};
-	});*/
+	});
 }
 
 function AddProduct() {
@@ -89,6 +89,8 @@ function AddProduct() {
 	connection.query(query, function(err, res) {
 		for (var i = 0; i < res.length; i++) {
 			console.log(res[i].product);
+			if error throw (err)
+				console.log('How much of the product would you like to purchase'),
 		}
 		runSearch();
 	});

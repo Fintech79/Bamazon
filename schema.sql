@@ -3,7 +3,7 @@ DROP DATABASE IF EXISTS Products;
 
 CREATE DATABASE Products;
 
--- Makes it so all of the following code will affect animals_db --
+-- Makes it so all of the following code will affect bamazon_db --
 USE Products;
 
 -- Creates the table "people" within animals_db --
